@@ -9,57 +9,57 @@
 To-Do 앱 API를 만드는 개요
 
 1. 리소스:
-- 사용자의 할 일(To-Do) 항목을 나타내는 리소스.
+    - 사용자의 할 일(To-Do) 항목을 나타내는 리소스.
 
 2. API 엔드포인트:
-- 할 일 목록을 가져오는 엔드포인트: GET /todos
-- 특정 할 일을 가져오는 엔드포인트: GET /todos/{todo_id} ==> GET /dodos/1 .. GET /dodos/2 .. GET /dodos/1 
-- 새 할 일을 추가하는 엔드포인트: POST /todos
-- 특정 할 일을 수정하는 엔드포인트: PUT /todos/{todo_id}
-- 특정 할 일을 삭제하는 엔드포인트: DELETE /todos/{todo_id}
+    - 할 일 목록을 가져오는 엔드포인트: GET /todos
+    - 특정 할 일을 가져오는 엔드포인트: GET /todos/{todo_id} ==> GET /dodos/1 .. GET /dodos/2 .. GET /dodos/1 
+    - 새 할 일을 추가하는 엔드포인트: POST /todos
+    - 특정 할 일을 수정하는 엔드포인트: PUT /todos/{todo_id}
+    - 특정 할 일을 삭제하는 엔드포인트: DELETE /todos/{todo_id}
 
 3. JSON 데이터 형식:
-{
-    "id": 1,
-    "title": "할 일 1",
-    "completed": false,
-    "created_at": "2023-11-01T12:00:00"
-}
+    {
+        "id": 1,
+        "title": "할 일 1",
+        "completed": false,
+        "created_at": "2023-11-01T12:00:00"
+    }
 
 4. 인증 및 권한:
-- 사용자 인증을 통해 API 접근 및 할 일 항목 조작 권한 부여
+    - 사용자 인증을 통해 API 접근 및 할 일 항목 조작 권한 부여
 
 5. 오류 처리:
 예시:
-- HTTP 상태 코드: 404 Not Found
-{
-    "error": "엔드포인트를 찾을 수 없습니다."
-}
-
-- HTTP 상태 코드: 400 Bad Request
-{
-    "error": "필수 필드 'title'이(가) 누락되었습니다."
-}
-
-- HTTP 상태 코드: 403 Forbidden
-{
-    "error": "권한이 없습니다. 이 작업을 수행할 권한이 없습니다."
-}
+    - HTTP 상태 코드: 404 Not Found
+    {
+        "error": "엔드포인트를 찾을 수 없습니다."
+    }
+    
+    - HTTP 상태 코드: 400 Bad Request
+    {
+        "error": "필수 필드 'title'이(가) 누락되었습니다."
+    }
+    
+    - HTTP 상태 코드: 403 Forbidden
+    {
+        "error": "권한이 없습니다. 이 작업을 수행할 권한이 없습니다."
+    }
 
 6. 보안:
 - 데이터 보호와 API 보호를 위한 조치. HTTPS를 사용하고 사용자 권한을 검증
 
 7. 버전 관리:
-- API 버전은 URI에 포함. 예: /v1/todos/{todo_id}
+    - API 버전은 URI에 포함. 예: /v1/todos/{todo_id}
 
 8. 문서화:
-- API 문서 작성. 엔드포인트, 요청 및 응답 형식, 사용 예시 등을 설명
+    - API 문서 작성. 엔드포인트, 요청 및 응답 형식, 사용 예시 등을 설명
 
 9. 테스트 및 모니터링:
-- 유닛 테스트 및 API 동작 모니터링을 구현
+    - 유닛 테스트 및 API 동작 모니터링을 구현
 
 10. API 사용 예시 제공:
-- API 사용자가 할 일 목록을 가져오고 추가, 수정, 삭제하는 예시를 제공
+    - API 사용자가 할 일 목록을 가져오고 추가, 수정, 삭제하는 예시를 제공
 
 
 #### RESTful API 설계 가이드 ####
